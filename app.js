@@ -1,8 +1,8 @@
 import universidad from './src/routes/universidad.js'
-const express = import('express');
-const cors = import('cors');
+import express from 'express';
+import cors from 'cors';
 const app = express();
-const bodyParser = import('body-parser');
+import bodyParser from 'body-parser';
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -15,4 +15,4 @@ app.use("/api", universidad)
 
 app.listen(3000, () => {
     console.log('server started');
-  });
+});

@@ -1,39 +1,43 @@
 import connection from "../database/connection.js";
 import { DataTypes, Model } from "sequelize";
 
-class Universidad extends Model {}
-Universidad.init({
+class Noticia extends Model {}
+Noticia.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    nombre: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: "unique_universidad"
-    },
-    logo: {
+    titulo: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    responsable: {
+    descripcion: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    ciudad: {
+    autor: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: "unique_universidad"
     },
-    info: {
+    fecha: {
+        type: DataTypes.DATE,
+        allowNull: false,
+    },
+    categoria: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    mesa: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'mesa',
+            key: 'id',
+        }
     }
 }, {
     sequelize: connection,
-    modelName: 'universidad',
-    timestamps: false,
+    modelName: 'noticia',
 });
 
-export default Universidad;
+export default Noticia;

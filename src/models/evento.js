@@ -1,8 +1,8 @@
 import connection from "../database/connection.js";
 import { DataTypes, Model } from "sequelize";
 
-class Universidad extends Model {}
-Universidad.init({
+class Evento extends Model {}
+Evento.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -11,9 +11,20 @@ Universidad.init({
     nombre: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: "unique_universidad"
     },
-    logo: {
+    fechaInicio: {
+        type: DataTypes.DATE,
+        allowNull: false,
+    },
+    fechaFin: {
+        type: DataTypes.DATE,
+        allowNull: false,
+    },
+    descripcion: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    lugar: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -21,19 +32,24 @@ Universidad.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    ciudad: {
+    contacto: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: "unique_universidad"
     },
-    info: {
+    url: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    mesa: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'mesa',
+            key: 'id',
+        }
     }
 }, {
     sequelize: connection,
-    modelName: 'universidad',
-    timestamps: false,
+    modelName: 'evento',
 });
 
-export default Universidad;
+export default Evento;
