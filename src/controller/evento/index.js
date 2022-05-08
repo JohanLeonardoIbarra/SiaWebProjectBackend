@@ -1,5 +1,5 @@
-import mostrarTodo from "./mostrarTodo.js";
-import mostrarUno from "./mostrarUno.js"
+import mostrarTodo from "./mostrarTodo";
+import mostrarUno from "./mostrarUno"
 
 export{
     mostrarTodo,

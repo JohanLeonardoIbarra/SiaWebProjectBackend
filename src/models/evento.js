@@ -1,4 +1,4 @@
-import connection from "../database/connection.js";
+import connection from "../database/connection";
 import { DataTypes, Model } from "sequelize";
 
 class Evento extends Model {}
@@ -50,6 +50,7 @@ Evento.init({
 }, {
     sequelize: connection,
     modelName: 'evento',
+    timestamps: false
 });
 
 export default Evento;

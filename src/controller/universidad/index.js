@@ -1,4 +1,4 @@
-import mostrarTodos from "./mostrarTodos.js"
+import mostrarTodos from "./mostrarTodos"
 
 export {
     mostrarTodos

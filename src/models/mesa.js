@@ -1,4 +1,4 @@
-import connection from "../database/connection.js";
+import connection from "../database/connection";
 import { DataTypes, Model } from "sequelize";
 
 class Mesa extends Model {}
@@ -26,6 +26,7 @@ Mesa.init({
 }, {
     sequelize: connection,
     modelName: 'mesa',
+    timestamps: false
 });
 
 export default Mesa;

@@ -1,12 +1,11 @@
 {
-    "name": "siaweb",
+    "name": "sies",
     "version": "1.0.0",
     "description": "",
-    "type": "module",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node app.js"
+        "test": "npx nodemon --exec babel-node src/app.js",
+        "start": "npx babel-node ./src/app.js"
     },
     "keywords": [],
     "author": "",
@@ -18,5 +17,11 @@
         "express": "^4.18.1",
         "pg": "^8.7.3",
         "sequelize": "^6.19.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.17.10",
+        "@babel/core": "^7.17.10",
+        "@babel/node": "^7.17.10",
+        "@babel/preset-env": "^7.17.10"
     }
 }

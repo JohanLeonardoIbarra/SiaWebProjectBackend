@@ -1,7 +1,7 @@
-import Uni from "./universidad.js";
-import Mesa from "./mesa.js";
-import Noticia from "./noticia.js";
-import Evento from "./evento.js";
+import Uni from "./universidad";
+import Mesa from "./mesa";
+import Noticia from "./noticia";
+import Evento from "./evento";
 
 const x = async() => {
     await Uni.sync();
@@ -15,7 +15,13 @@ const x = async() => {
         ciudad: "Cucúta",
         info: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
     })
-    const unis = await Uni.findAll();
+
+    await Mesa.create({
+        nombre: "Mesa 1",
+        descripcion: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        universidad_id: 1
+    })
+    const unis = await Mesa.findAll();
     console.log(unis);
 }
 

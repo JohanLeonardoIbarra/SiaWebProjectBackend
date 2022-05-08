@@ -1,7 +1,10 @@
-import universidad from './src/routes/universidad.js';
-import evento from "./src/routes/eventos.js";
 import express from 'express';
 import cors from 'cors';
+
+//Importo las rutas de ./routes/index.js puedo llamar la carpeta sin el index gracias a babel
+import { eventos, universidades, mesas } from './routes';
+
+
 const app = express();
 
 //Middlewares
@@ -12,8 +15,9 @@ app.use(cors({
 
 
 //Routes
-app.use("/api", universidad)
-app.use("/api", evento)
+app.use("/api", universidades);
+app.use("/api", eventos);
+app.use("/api", mesas)
 
 
 //Server Listen

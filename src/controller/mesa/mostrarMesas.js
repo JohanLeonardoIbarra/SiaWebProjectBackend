@@ -1,5 +1,6 @@
-import mesa from '../../routes/mesa.js';
+import Mesa from "../../models/mesa";
+
 export default async (req, res) => {
-    const mesas = await mesa.findAll();
+    const mesas = await Mesa.findAll();
     res.status(200).json(mesas);
 }

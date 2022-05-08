@@ -1,4 +1,5 @@
-import mostrarMesas from "./mostrarMesas.js";
+import mostrarMesas from "./mostrarMesas";
+
 export {
     mostrarMesas
 }

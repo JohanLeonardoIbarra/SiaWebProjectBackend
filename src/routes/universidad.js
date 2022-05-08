@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import {mostrarTodos} from '../controller/universidad/index.js';
+import {mostrarTodos} from '../controller/universidad';
 
 const router = new Router()
 
