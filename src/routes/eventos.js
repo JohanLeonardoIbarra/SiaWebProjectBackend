@@ -1,12 +1,11 @@
 import { Router } from "express";
-import { mostrarTodo } from "../controller/evento/index";
-import { mostrarUno } from "../controller/evento/index"
+import { mostrarTodo, mostrarUno } from "../controller/evento/index.js";
 
-const router = new Router
+const router = new Router();
 
-router.get('/eventos', mostrarTodo)
-router.get('/evento', mostrarUno)
+router.get('/eventos', mostrarTodo);
+//router.get('/evento', mostrarUno);
 
-export default router
+export default router;
 
 

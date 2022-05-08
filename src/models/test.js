@@ -4,10 +4,10 @@ import Noticia from "./noticia.js";
 import Evento from "./evento.js";
 
 const x = async() => {
-    await Uni.sync({ force: true });
-    //Mesa.sync({ force: true });
-    //Noticia.sync({ force: true });
-    //Evento.sync({ force: true });
+    await Uni.sync();
+    await Mesa.sync();
+    await Noticia.sync();
+    await Evento.sync();
     await Uni.create({
         nombre: "Universidad Francisco de Paula Santander",
         logo: "https://ww2.ufps.edu.co/public/archivos/elementos_corporativos/logo-horizontal.jpg",
