@@ -22,24 +22,31 @@
 - El archivo que posee la ruta debe ser estructurado asi:
 
 import { Router } from "express";// Importo Express Router
+
 import { MostrarAlgo } from "@Controller/algo";//Importo el metodo controlador
+
 //el metodo seria el que maneja la peticion (req, res) => { res.send("hola") }
 
 // creo una instancia de Router
+
 const router = new Router();
 
 // en la instancia defino las rutas (get, post, put, delete, etc...)
+
 router.get("/ruta", MostrarAlgo);
 
 // exporto el router (esto es muy importante vi que alguien no lo hizo)
+
 export default router;
 
 - En app.js llamo la ruta de esta forma
 
 //importo el router 
+
 import algo from "@Router/algo"
 
 //El primer parametro es opcional el segundo no
+
 app.use("/ruta-opcional", algo);
 
 ## Carpeta Controller
@@ -65,6 +72,7 @@ export default const MostarTodos = (req, res) => {
 --index.js
 
 import uno from ./mostrarUno.js
+
 import todos from ./mostrarTodos.js
 
 export {
