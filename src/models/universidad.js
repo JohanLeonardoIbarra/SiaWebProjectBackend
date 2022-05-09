@@ -1,4 +1,4 @@
-import connection from "../database/connection.js";
+import connection from "@DB/connection";
 import { DataTypes, Model } from "sequelize";
 
 class Universidad extends Model {}

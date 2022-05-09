@@ -1,4 +1,4 @@
-import evento from "../../models/evento.js"
+import evento from "@Model/evento"
 
 export default async (req, res) => {
     const eventos = await evento.findAll()
