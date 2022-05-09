@@ -1,8 +1,11 @@
 import express from 'express';
 import cors from 'cors';
+// Implemento module aliases
+import 'module-alias/register';
 
 //Importo las rutas de ./routes/index.js puedo llamar la carpeta sin el index gracias a babel
-import { eventos, universidades, mesas } from './routes';
+//@Router es un alias para ./src/routes/
+import { eventos, universidades, mesas } from '@Router';
 
 
 const app = express();

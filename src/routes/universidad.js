@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import {mostrarTodos} from '../controller/universidad';
+import {mostrarTodos} from '@Controller/universidad';
 
 const router = new Router()
 

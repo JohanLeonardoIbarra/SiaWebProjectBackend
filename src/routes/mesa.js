@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import { mostrarMesas } from '../controller/mesa';
+import { mostrarMesas } from '@Controller/mesa';
 
 const router = new Router();
 

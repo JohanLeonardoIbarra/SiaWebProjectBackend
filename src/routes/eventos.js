@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { mostrarTodo, mostrarUno } from "../controller/evento";
+import { mostrarTodo, mostrarUno } from "@Controller/evento";
 
 const router = new Router();
 
