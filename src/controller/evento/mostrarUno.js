@@ -1,9 +1,16 @@
 import evento from "@Model/evento"
 
 export default async (req, res) => {
-    const eventos = await evento.findOne()
-    console.log('Si compila aqui, ta bien');
+    try{
+      const eventos = await evento.findOne({
+      where: { id: req.params.id }
+    })
     res.status(200).json(eventos)
+    }
+  catch(err){
+    console.err(err);
+    res.status(500).json({
+      message: err.message,
+    })
+  }
 }
-
-//Tomado de https://sequelize.org/docs/v6/core-concepts/model-querying-finders/

@@ -5,7 +5,7 @@ import 'module-alias/register';
 
 //Importo las rutas de ./routes/index.js puedo llamar la carpeta sin el index gracias a babel
 //@Router es un alias para ./src/routes/
-import { eventos, universidades, mesas } from '@Router';
+import { eventos, universidades, mesas, noticias } from '@Router';
 
 
 const app = express();
@@ -20,7 +20,8 @@ app.use(cors({
 //Routes
 app.use("/api", universidades);
 app.use("/api", eventos);
-app.use("/api", mesas)
+app.use("/api", mesas);
+app.use("/api", noticias);
 
 
 //Server Listen
