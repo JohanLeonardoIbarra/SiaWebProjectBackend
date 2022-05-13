@@ -16,6 +16,10 @@ Mesa.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
+    correo:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     universidad_id: {
         type: DataTypes.INTEGER,
         references: {

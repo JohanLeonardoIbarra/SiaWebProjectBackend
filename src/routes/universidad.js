@@ -6,4 +6,5 @@ const router = new Router()
 router.get('/universidades', mostrarTodos)
 
 
+
 export default router;

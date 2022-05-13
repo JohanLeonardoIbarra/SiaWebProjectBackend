@@ -1,4 +1,4 @@
-import { MostrarTodos } from "./noticia";
+import { MostrarTodos } from "./MostrarTodos";
 
 export {
   MostrarTodos,
