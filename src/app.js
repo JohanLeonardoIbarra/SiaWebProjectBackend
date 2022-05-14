@@ -10,12 +10,13 @@ import { eventos, universidades, mesas, noticias } from '@Router';
 
 const app = express();
 
+app.set("port", process.env.PORT || 3000);
+
 //Middlewares
 app.use(express.json());
 app.use(cors({
     origin: '*'
 }));
-
 
 //Routes
 app.use("/api", universidades);
@@ -25,6 +26,7 @@ app.use("/api", noticias);
 
 
 //Server Listen
-app.listen(3000, () => {
-    console.log('server started');
+app.listen(app.get("port") , () => {
+    console.log('server started on port', app.get("port"));
 });
+
