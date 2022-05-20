@@ -1,7 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-// Implemento module aliases
-import 'module-alias/register';
+
+import moduleAlias from './config/module.alias';
+
+//moduleAlias();
 
 //Importo las rutas de ./routes/index.js puedo llamar la carpeta sin el index gracias a babel
 //@Router es un alias para ./src/routes/
