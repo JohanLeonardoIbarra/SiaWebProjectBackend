@@ -4,10 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "start": "npm run build && npm run serve",
         "build": "babel src/ --out-dir build",
         "serve": "node build/app.js",
-        "test": "npx nodemon --exec babel-node src/app.js",
-        "start": "npm run build && npm run serve"
+        "test": "npx nodemon --exec babel-node src/app.js"
     },
     "keywords": [],
     "author": "",
