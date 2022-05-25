@@ -15,5 +15,6 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 
 const router = new _express.Router();
 router.get("/noticia", Controller.MostrarTodos);
+router.post("/noticia", Controller.agregarNoticia);
 var _default = router;
 exports.default = _default;

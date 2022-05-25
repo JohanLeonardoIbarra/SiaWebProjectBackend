@@ -5,4 +5,6 @@ const router = new Router();
 
 router.get("/noticia", Controller.MostrarTodos);
 
+router.post("/noticia", Controller.agregarNoticia);
+
 export default router;

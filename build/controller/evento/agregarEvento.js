@@ -5,33 +5,41 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _universidad = _interopRequireDefault(require("@Model/universidad"));
+var _evento = _interopRequireDefault(require("@Model/evento"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = async (req, res) => {
   const {
     nombre,
-    logo,
+    fechaInicio,
+    fechaFin,
+    descripcion,
+    lugar,
     responsable,
-    ciudad,
-    info
+    contacto,
+    url,
+    mesa
   } = req.body;
 
   try {
-    const Uni = await _universidad.default.create({
+    const even = await _evento.default.create({
       nombre,
-      logo,
+      fechaInicio,
+      fechaFin,
+      descripcion,
+      lugar,
       responsable,
-      ciudad,
-      info
+      contacto,
+      url,
+      mesa
     });
     res.status(200).send({
-      message: `Universidad creada con exito`
+      message: `Evento creada con exito`
     });
   } catch (e) {
     res.status(500).send({
-      message: `Error al crear nueva universidad: ${e}`
+      message: `Error al crear evento: ${e}`
     });
   }
 };

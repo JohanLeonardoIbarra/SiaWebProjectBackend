@@ -12,5 +12,6 @@ var _evento = require("@Controller/evento");
 const router = new _express.Router();
 router.get('/eventos', _evento.mostrarTodo);
 router.get('/evento/:id', _evento.mostrarUno);
+router.post('/eventos', _evento.agregarEvento);
 var _default = router;
 exports.default = _default;

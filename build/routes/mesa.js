@@ -11,5 +11,6 @@ var _mesa = require("@Controller/mesa");
 
 const router = new _express.Router();
 router.get('/mesas', _mesa.mostrarMesas);
+router.post('/mesas', _mesa.agregarMesa);
 var _default = router;
 exports.default = _default;
