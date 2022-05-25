@@ -14,7 +14,7 @@ var _default = async (req, res) => {
     nombre,
     descripcion,
     correo,
-    id_uni
+    universidad_id
   } = req.body;
 
   try {
@@ -22,7 +22,7 @@ var _default = async (req, res) => {
       nombre,
       descripcion,
       correo,
-      id_uni
+      universidad_id
     });
     res.status(200).send({
       message: `Mesa creada con exito`
