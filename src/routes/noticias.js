@@ -3,8 +3,12 @@ import * as Controller from "@Controller/noticia";
 
 const router = new Router();
 
-router.get("/noticia", Controller.MostrarTodos);
+router.get("/noticias", Controller.MostrarTodos);
 
-router.post("/noticia", Controller.agregarNoticia);
+router.post("/noticias", Controller.agregarNoticia);
+
+router.put("/noticias/:id", Controller.editarNoticia);
+
+router.delete("/noticias/:id", Controller.eliminarNoticia);
 
 export default router;
