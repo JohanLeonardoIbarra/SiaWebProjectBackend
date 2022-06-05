@@ -27,7 +27,7 @@ app.use("/api", _Router.eventos);
 app.use("/api", _Router.mesas);
 app.use("/api", _Router.noticias);
 app.get("/reset/:code", (req, res) => {
-  if (req.params.code == "siaweb_2022*") {
+  if (req.params.code === process.env.RESET_CODE) {
     (0, _test.default)();
     res.status(200).send({
       message: "Tablas reiniciadas"
