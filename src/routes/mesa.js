@@ -6,6 +6,6 @@ const router = new Router();
 router.get('/mesas', mostrarTodos);
 router.post('/mesas', agregarMesa);
 router.put('/mesas/:id', editarMesa)
-router.delete('/mesas/:id', editarMesa)
+router.delete('/mesas/:id', eliminarMesa)
 
 export default router;
