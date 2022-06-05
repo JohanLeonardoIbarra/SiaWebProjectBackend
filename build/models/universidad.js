@@ -38,8 +38,7 @@ Universidad.init({
     unique: "unique_universidad"
   },
   info: {
-    type: _sequelize.DataTypes.STRING,
-    allowNull: false
+    type: _sequelize.DataTypes.STRING
   }
 }, {
   sequelize: _connection.default,

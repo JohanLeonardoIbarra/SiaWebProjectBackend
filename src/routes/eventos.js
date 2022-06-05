@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { mostrarTodo, mostrarUno, agregarEvento, editarEvento, eliminarEvento } from "@Controller/evento";
+import { mostrarTodos, mostrarUno, agregarEvento, editarEvento, eliminarEvento } from "@Controller/evento";
 
 const router = new Router();
 
-router.get('/eventos', mostrarTodo);
-router.get('/evento/:id', mostrarUno);
+router.get('/eventos', mostrarTodos);
+router.get('/eventos/:id', mostrarUno);
 router.post('/eventos', agregarEvento);
 router.put('/eventos/:id', editarEvento);
 router.delete('/eventos/:id', eliminarEvento);

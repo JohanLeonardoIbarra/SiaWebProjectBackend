@@ -5,35 +5,30 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _universidad = _interopRequireDefault(require("./universidad"));
+
 var _mesa = _interopRequireDefault(require("./mesa"));
+
+var _noticia = _interopRequireDefault(require("./noticia"));
+
+var _evento = _interopRequireDefault(require("./evento"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//import Uni from "./universidad";
-// import Noticia from "./noticia";
-// import Evento from "./evento";
-const x = async () => {
-  // await Uni.sync();
+const reiniciarTablas = async () => {
+  await _universidad.default.sync({
+    force: true
+  });
   await _mesa.default.sync({
     force: true
-  }); // await Noticia.sync();
-  // await Evento.sync();
-  // await Uni.create({
-  //     nombre: "Universidad Francisco de Paula Santander",
-  //     logo: "https://ww2.ufps.edu.co/public/archivos/elementos_corporativos/logo-horizontal.jpg",
-  //     responsable: "Ing. Sacarias Piedras del Rio",
-  //     ciudad: "Cucúta",
-  //     info: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
-  // })
-  // await Mesa.create({
-  //     nombre: "Mesa 1",
-  //     descripcion: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
-  //     universidad_id: 1
-  // })
-
-  const unis = await _mesa.default.findAll();
-  console.log(unis);
+  });
+  await _noticia.default.sync({
+    force: true
+  });
+  await _evento.default.sync({
+    force: true
+  });
 };
 
-var _default = x;
+var _default = reiniciarTablas;
 exports.default = _default;

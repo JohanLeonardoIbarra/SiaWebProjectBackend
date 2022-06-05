@@ -14,7 +14,9 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 const router = new _express.Router();
-router.get("/noticia", Controller.MostrarTodos);
-router.post("/noticia", Controller.agregarNoticia);
+router.get("/noticias", Controller.MostrarTodos);
+router.post("/noticias", Controller.agregarNoticia);
+router.put("/noticias/:id", Controller.editarNoticia);
+router.delete("/noticias/:id", Controller.eliminarNoticia);
 var _default = router;
 exports.default = _default;

@@ -1,28 +1,13 @@
-//import Uni from "./universidad";
+import Uni from "./universidad";
 import Mesa from "./mesa";
-// import Noticia from "./noticia";
-// import Evento from "./evento";
+import Noticia from "./noticia";
+import Evento from "./evento";
 
-const x = async() => {
-    // await Uni.sync();
+const reiniciarTablas = async() => {
+    await Uni.sync({ force: true });
     await Mesa.sync({ force: true });
-    // await Noticia.sync();
-    // await Evento.sync();
-    // await Uni.create({
-    //     nombre: "Universidad Francisco de Paula Santander",
-    //     logo: "https://ww2.ufps.edu.co/public/archivos/elementos_corporativos/logo-horizontal.jpg",
-    //     responsable: "Ing. Sacarias Piedras del Rio",
-    //     ciudad: "Cucúta",
-    //     info: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
-    // })
-
-    // await Mesa.create({
-    //     nombre: "Mesa 1",
-    //     descripcion: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
-    //     universidad_id: 1
-    // })
-    const unis = await Mesa.findAll();
-    console.log(unis);
+    await Noticia.sync({ force: true });
+    await Evento.sync({ force: true });
 }
 
-export default x;
+export default reiniciarTablas;

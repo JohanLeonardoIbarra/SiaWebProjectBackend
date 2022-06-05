@@ -28,16 +28,13 @@ Evento.init({
     allowNull: false
   },
   fechaFin: {
-    type: _sequelize.DataTypes.DATE,
-    allowNull: false
+    type: _sequelize.DataTypes.DATE
   },
   descripcion: {
-    type: _sequelize.DataTypes.STRING,
-    allowNull: false
+    type: _sequelize.DataTypes.STRING
   },
   lugar: {
-    type: _sequelize.DataTypes.STRING,
-    allowNull: false
+    type: _sequelize.DataTypes.STRING
   },
   responsable: {
     type: _sequelize.DataTypes.STRING,
@@ -48,15 +45,15 @@ Evento.init({
     allowNull: false
   },
   url: {
-    type: _sequelize.DataTypes.STRING,
-    allowNull: false
+    type: _sequelize.DataTypes.STRING
   },
-  mesa: {
+  mesa_id: {
     type: _sequelize.DataTypes.INTEGER,
     references: {
       model: 'mesa',
       key: 'id'
-    }
+    },
+    allowNull: false
   }
 }, {
   sequelize: _connection.default,

@@ -28,7 +28,6 @@ Universidad.init({
   },
   info: {
     type: DataTypes.STRING,
-    allowNull: false,
   }
 }, {
     sequelize: connection,

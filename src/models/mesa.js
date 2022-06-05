@@ -14,7 +14,6 @@ Mesa.init({
     },
     descripcion: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     correo:{
       type: DataTypes.STRING,
@@ -25,7 +24,8 @@ Mesa.init({
         references: {
             model: 'universidad',
             key: 'id',
-        }
+        },
+        allowNull: false,
     }
 }, {
     sequelize: connection,

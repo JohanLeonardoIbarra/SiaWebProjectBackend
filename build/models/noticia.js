@@ -28,23 +28,18 @@ Noticia.init({
     allowNull: false
   },
   autor: {
-    type: _sequelize.DataTypes.STRING,
-    allowNull: false
-  },
-  fecha: {
-    type: _sequelize.DataTypes.DATE,
-    allowNull: false
+    type: _sequelize.DataTypes.STRING
   },
   categoria: {
-    type: _sequelize.DataTypes.STRING,
-    allowNull: false
+    type: _sequelize.DataTypes.STRING
   },
-  mesa: {
+  mesa_id: {
     type: _sequelize.DataTypes.INTEGER,
     references: {
       model: 'mesa',
       key: 'id'
-    }
+    },
+    allowNull: false
   }
 }, {
   sequelize: _connection.default,

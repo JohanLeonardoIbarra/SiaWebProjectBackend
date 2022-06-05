@@ -18,15 +18,12 @@ Evento.init({
     },
     fechaFin: {
         type: DataTypes.DATE,
-        allowNull: false,
     },
     descripcion: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     lugar: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     responsable: {
         type: DataTypes.STRING,
@@ -38,14 +35,14 @@ Evento.init({
     },
     url: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
-    mesa: {
+    mesa_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'mesa',
             key: 'id',
-        }
+        },
+        allowNull: false
     }
 }, {
     sequelize: connection,

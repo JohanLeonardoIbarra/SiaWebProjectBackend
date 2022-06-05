@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { mostrarMesas, agregarMesa, editarMesa, eliminarMesa } from '@Controller/mesa';
+import { mostrarTodos, agregarMesa, editarMesa, eliminarMesa } from '@Controller/mesa';
 
 const router = new Router();
 
-router.get('/mesas', mostrarMesas);
+router.get('/mesas', mostrarTodos);
 router.post('/mesas', agregarMesa);
 router.put('/mesas/:id', editarMesa)
 router.delete('/mesas/:id', editarMesa)
